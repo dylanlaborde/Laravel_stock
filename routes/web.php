@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('table_stock');
-});
+// Route::get('/', function () {
+//     return view('table_stock');
+// });
 
-Route::get('/product','StockController@getIndex');
+Route::get('/','StockController@getIndex');
