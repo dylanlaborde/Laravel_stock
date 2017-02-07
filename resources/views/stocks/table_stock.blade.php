@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 <head>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css">
-	<meta charset="UTF-8">
-	<title>acceuil</title>
+	<title>produit</title>
 </head>
-<body>
 
+	@section('content')
 	<div class="ui grid">
 		<div class="six wide column"></div>
 		<h1>liste des produit</h1>
@@ -15,7 +12,7 @@
 		<div class="four wide column"></div>
 		<table class="ui striped table">
 			<thead>
-				
+
 				<tr>
 					<th>id</th>
 					<th>name</th>
@@ -38,5 +35,5 @@
 		</table>
 
 	</div>
-</body>
-</html>
+	@stop
+
