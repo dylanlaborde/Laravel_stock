@@ -7,8 +7,8 @@ use App\Stock;
 
 class StockController extends Controller
 {
-   public function getIndex(){
-  	$product=Stock::all();
-return view('table_stock',['produit'=>$product]);
-  }
+	public function getIndex(){
+		$product=Stock::all();
+		return view('stocks.table_stock',['produit'=>$product]);
+	}
 }
