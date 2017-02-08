@@ -20,14 +20,15 @@ class StockController extends Controller
 		$detail=Stock::find($id);
 		$detail->stock--;
 		$detail->save();
-		return back();
+		return back()->with('message', 'Vous avez vendu 1 article!');
 	}
 	public function postRefill($id){
 		
 		$detail=Stock::find($id);
 		$detail->stock++;
 		$detail->save();
-		return back();
+		return back()->with('message', 'Vous avez rajouter 1 article!');
+
 
 	}
 }
