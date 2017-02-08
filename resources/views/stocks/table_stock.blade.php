@@ -18,17 +18,19 @@
 					<th>name</th>
 					<th>price</th>		
 					<th>descrition</th>		
-					<th>stock</th>		
+					<th>stock</th>	
+					<th></th>	
 				</tr>		
 			</thead>
 			<tbody>
 				@foreach($produit as $key)
 				<tr>
-					<td>{{$key->id}}</td>
+					<td><a href="/{{$key->id}}">{{$key->id}}</a></td>
 					<td>{{$key->name}}</td>
-					<td>{{$key->price}}</td>
+					<td>{{$key->price /100}} €</td>
 					<td>{{$key->descrition}}</td>
 					<td>{{$key->stock}}</td>
+					<td><a href="/show_detail/{{$key->id}}" class="ui button">detail</a></td>
 				</tr>
 				@endforeach
 			</tbody>
