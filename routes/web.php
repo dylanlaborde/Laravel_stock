@@ -16,3 +16,8 @@
 // });
 
 Route::get('/','StockController@getIndex');
+
+Route::get('/show_detail/{id}','StockController@getDetail');
+
+Route::post('/sell/{id}','StockController@postSell');
+Route::post('/refill/{id}','StockController@postRefill');
