@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Stock;
 
+
 class StockController extends Controller
 {
 	public function getIndex(){
@@ -34,5 +35,20 @@ class StockController extends Controller
 	public function getEdit($id){
 		$detail=Stock::find($id);
 		return view('stocks.edit_stock',['details'=>$detail]);
+	}
+	public function saveEdit(Request $request){
+		$stock= Stock::find($request->id);
+
+		$stock->name = $request->Name;
+		$stock->price = $request->Price;
+		$stock->descrition = $request->Description;
+		$stock->stock = $request->stock;
+
+		$stock->save();
+		return redirect('/')->with('editSuccess', 'l\article a bien été modifier');
+		
+
+		
+		
 	}
 }
