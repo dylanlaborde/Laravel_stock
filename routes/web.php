@@ -15,9 +15,10 @@
 //     return view('table_stock');
 // });
 
-Route::get('/','StockController@getIndex');
 
+Route::get('/','StockController@getIndex');
 Route::get('/show_detail/{id}','StockController@getDetail');
+Route::get('/edit_stock/{id}','StockController@getEdit');
 
 Route::post('/sell/{id}','StockController@postSell');
 Route::post('/refill/{id}','StockController@postRefill');
