@@ -19,8 +19,10 @@
 Route::get('/','StockController@getIndex');
 Route::get('/show_detail/{id}','StockController@getDetail');
 Route::get('/edit_stock/{id}','StockController@getEdit');
+Route::get('/add_product', 'StockController@getNewProduct');
+
+
 Route::post('/edit_stock/{id}','StockController@saveEdit');
-
-
 Route::post('/sell/{id}','StockController@postSell');
 Route::post('/refill/{id}','StockController@postRefill');
+Route::post('/add_product','StockController@addProduct');
