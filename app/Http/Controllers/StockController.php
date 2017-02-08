@@ -31,4 +31,8 @@ class StockController extends Controller
 
 
 	}
+	public function getEdit($id){
+		$detail=Stock::find($id);
+		return view('stocks.edit_stock',['details'=>$detail]);
+	}
 }
