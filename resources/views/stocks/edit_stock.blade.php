@@ -7,7 +7,9 @@
 <h1>Editer le stock de {{$details->name}}</h1>
 <a href="/" class="ui button">Retour</a>
 
-<form action="" method="post" class="ui form">
+<form action="/edit_stock/{{$details->id}}" method="post" class="ui form">
+	<input type="hidden" name="_token" value="{{ csrf_token() }}">
+
 	<input type="hidden" name="id" value="{{$details->id}}">
 	<div class="field">
 		<label for="Name">Name</label>
