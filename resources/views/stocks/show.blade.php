@@ -5,7 +5,7 @@
 
 @section('content')
 <div class="ui grid">
-	<div class="four wide column"></div>
+	<div class="seven wide column"></div>
 	<h1>detail {{$details->name}}</h1>
 </div>
 <div class="ui grid">
@@ -45,7 +45,9 @@
 				<td>{{$details->price /100}} €</td>
 				<td>{{$details->descrition}}</td>
 				<td>{{$details->stock}}</td>
-				
+				<td>
+				<a href="/edit_stock/{{$details->id}}" class="ui primary button">Editer</a>
+				</td>
 			</tr>
 		</tbody>
 	</table>
