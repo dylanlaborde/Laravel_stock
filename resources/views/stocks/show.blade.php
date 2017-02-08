@@ -4,14 +4,25 @@
 </head>
 
 @section('content')
-
 <div class="ui grid">
-	<div class="seven wide column"></div>
+	<div class="four wide column"></div>
 	<h1>detail {{$details->name}}</h1>
 </div>
 <div class="ui grid">
-	<div class="four wide column">
+	<div class="six wide column">
 		<a href="/" class="ui labeled button icon"><i class="home icon"></i>return to Home</a>
+	</div>
+	<div class="four wide column">
+		@if(session('message'))
+		<div class="ui success message">
+			<i class="close icon"></i>
+			<div class="header">
+				Succes
+			</div>
+			<p>{{session('message')}}
+			</p>
+		</div>
+		@endif
 	</div>
 </div>
 <div class="ui grid">
@@ -80,5 +91,6 @@
 	
 	
 </div>
+
 @stop
 
