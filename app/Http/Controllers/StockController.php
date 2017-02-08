@@ -47,8 +47,23 @@ class StockController extends Controller
 		$stock->save();
 		return redirect('/')->with('editSuccess', 'l\article a bien été modifier');
 		
-
+	}
+	public function getNewProduct(){
+		$product=Stock::all();
 		
+		return view('stocks.add_product',['produit'=>$product]);
+	}
+	public function addProduct(Request $request){
+		$stock = new Stock;
+
+		$stock->name = $request->Name;
+		$stock->price = $request->Price;
+		$stock->descrition = $request->Description;
+		$stock->stock = $request->stock;
+
+		$stock->save();
+		return redirect('/')->with('editSuccess', 'l\article a bien été ajouté');
+
 		
 	}
 }
