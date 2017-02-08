@@ -4,6 +4,16 @@
 </head>
 
 	@section('content')
+		@if(session('editSuccess'))
+		<div class="ui success message">
+			<i class="close icon"></i>
+			<div class="header">
+				Succes
+			</div>
+			<p>{{session('editSuccess')}}
+			</p>
+		</div>
+		@endif
 	<div class="ui grid">
 		<div class="six wide column"></div>
 		<h1>liste des produit</h1>
